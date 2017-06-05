@@ -1,0 +1,26 @@
+{
+  "name": "sql-assessment-in-dev",
+  "version": "1.0.0",
+  "description": "sql assessment",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevMountain/sql-assessment-in-dev.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevMountain/sql-assessment-in-dev/issues"
+  },
+  "homepage": "https://github.com/DevMountain/sql-assessment-in-dev#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
+    "express": "^4.15.2",
+    "massive": "^2.6.0"
+  }
+}

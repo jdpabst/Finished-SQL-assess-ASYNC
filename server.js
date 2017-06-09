@@ -21,12 +21,10 @@ massive({
 
   // Initialize user table and vehicle table.
   db.init_tables.user_create_seed().then( response => {
-    if (!err) {
-      console.log('User table init');
-      db.init_tables.vehicle_create_seed().then( response => {
-        console.log('Vehicle table init');
-      })
-    }
+    console.log('User table init');
+    db.init_tables.vehicle_create_seed().then( response => {
+      console.log('Vehicle table init');
+    })
   })
 
 })

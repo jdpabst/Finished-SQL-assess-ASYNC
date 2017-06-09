@@ -3,29 +3,35 @@ const express = require('express')
     , cors = require('cors')
     , massive = require('massive');
 
-const app = module.exports = express();
+const app = express();
 
 app.use(bodyParser.json())
 app.use(cors());
 
-// You need to update connectionString.
-const connectionString = 'postgres://username:password@localhost/assessbox';
-// Use connectSync method to connect to database
-const massiveInstance = massive.connectSync({
-  connectionString: connectionString
+// You need to complete the information below to connect
+// to the assessbox database on your postgres server.
+massive({
+  host: //host,
+  port: //port,
+  database: //database,
+  user: //user,
+  password: //password
+}).then( db => {
+  app.set('db', db);
+
+  // Initialize user table and vehicle table.
+  db.init_tables.user_create_seed((err, response) => {
+    if (!err) {
+      console.log('User table init');
+      db.init_tables.vehicle_create_seed((err, response) => {
+        console.log('Vehicle table init');
+      })
+    }
+  })
+
 })
 
-app.set('db', massiveInstance);
-const db = app.get('db');
 
-// Initialize user table and vehicle table.
-db.init_tables.user_create_seed((err, response) => {
-  if (!err) {
-    db.init_tables.vehicle_create_seed((err, response) => {
-      console.log('tables initialized');
-    })
-  }
-})
 
 // ===== Build enpoints below ============
 

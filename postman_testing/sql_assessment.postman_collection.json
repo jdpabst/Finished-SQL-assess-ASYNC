@@ -19,7 +19,8 @@
 		"d921fcd0-c37e-8a96-eb4f-1bf3564dadc3",
 		"031deb19-f963-0175-9bf6-301ee1fb3041",
 		"7aaa30e7-7c16-5c4d-42ac-1282cc849223",
-		"0e7a54d7-acae-7a46-6351-1c7d454bb47c"
+		"0e7a54d7-acae-7a46-6351-1c7d454bb47c",
+		"d2a06fa9-f25f-010e-9613-15bb530be9a1"
 	],
 	"folders": [],
 	"timestamp": 1495178094388,
@@ -268,6 +269,26 @@
 			"description": "",
 			"collectionId": "b3b693cb-43f2-bbe9-0034-0541c0b18366",
 			"responses": []
+		},
+		{
+			"id": "d2a06fa9-f25f-010e-9613-15bb530be9a1",
+			"headers": "",
+			"url": "localhost:3000/api/vehicle/4",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "b3b693cb-43f2-bbe9-0034-0541c0b18366",
+			"data": null,
+			"dataMode": "params",
+			"name": "DELETE - Vehicle By Id - #12",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1496990146347,
+			"version": 2,
+			"responses": [],
+			"tests": "const res = JSON.parse(responseBody);\nconst vehicles = JSON.parse(postman.getGlobalVariable('vehicles'));\n\nconst removedVehicle = vehicles.filter( v => v.id === 4 );\n\nlet flag = true;\nfor (let key in removedVehicle[0]) {\n    if (removedVehicle[0][key] !== res[0][key]) flag = false;\n}\n\ntests['Correct vehicle deleted'] = flag && res.length === removedVehicle.length;",
+			"currentHelper": "normal",
+			"helperAttributes": {}
 		},
 		{
 			"id": "d49b275f-3c16-1f46-8578-c44c473c9434",

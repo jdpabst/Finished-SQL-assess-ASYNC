@@ -3,24 +3,24 @@
 DROP TABLE IF EXISTS vehicles;
 -- =======================
 
--- Write a create table statement below. The table needs to be called 'vehicles'. The table should have the following columns:
+-- Complete the create table statement below. The table should have the following columns:
 
 -- id ( auto incrementing primary key )
 -- make ( string )
 -- model (string)
 -- year (integer)
--- owner (integer, foreign key)
+-- owner_id (integer, foreign key)
+
+CREATE TABLE IF NOT EXISTS vehicles (
+  id --(add datatype and/or table contraint),
+  make --(add datatype and/or table contraint),
+  model --(add datatype and/or table contraint),
+  year --(add datatype and/or table contraint),
+  owner_id --(add datatype and/or table contraint),
+);
 
 
-
-
-
-
-
-
--- Write an insert statement below. You will need to insert the user data into the 'users' table.
-
-
+-- Complete the insert statement below. The values below need to be inserted into the 'vehicles' table.
 
 
 ('Toyota', 'Camry', 1991, 1),

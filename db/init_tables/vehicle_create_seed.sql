@@ -1,15 +1,17 @@
 -- The table needs to be dropped each time you restart nodemon. This is necessary for the Postman tests.
--- =======================
+-- === DROP TABLE ====================
+
 DROP TABLE IF EXISTS vehicles;
--- =======================
+
+-- === CREATE TABLE ==================
 
 -- Complete the create table statement below. The table should have the following columns:
 
--- id ( auto incrementing primary key )
--- make ( string )
--- model (string)
--- year (integer)
--- owner_id (integer, foreign key)
+-- id         should be an auto-incrementing number, primary key
+-- make       should be a string
+-- model      should be a string
+-- year       should be a number
+-- owner_id   should be a number, foreign key
 
 CREATE TABLE IF NOT EXISTS vehicles (
   id --(add datatype and/or table contraint),
@@ -19,6 +21,7 @@ CREATE TABLE IF NOT EXISTS vehicles (
   owner_id --(add datatype and/or table contraint)
 );
 
+-- === INSERT STATEMENT ===============
 
 -- Complete the insert statement below. The values below need to be inserted into the 'vehicles' table.
 

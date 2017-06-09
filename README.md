@@ -17,9 +17,9 @@
   ```
   Columns for users table:
 
-  id      (auto-incrementing primary key)
-  name    (string)
-  email   (string)
+  id      should be an auto-incrementing number, primary key
+  name    should be a string
+  email   should be a string
 
   ```
 
@@ -35,11 +35,11 @@
   ```
   Columns for vehicles table:
 
-  id        (auto-incrementing primary key)
-  make      (string)
-  model     (string)
-  year      (integer)
-  owner_id  (integer, foreign key)
+  id        should be an auto-incrementing number, primary key
+  make      should be a string
+  model     should be a string
+  year      should be a number
+  owner_id  should be a number, foreign key
   ```
 
   The following data needs to be inserted into the `vehicles` table. Complete the unfinished insert statement in `vehicle_create_seed.sql`.
@@ -80,7 +80,7 @@
 
       **NOTE:** You need to be running ```nodemon``` in order to successfully run the Postman tests.
 
-      **IMPORTANT:** The Postman tests manipulate some of the user data. Before you run the Postman tests, you should restart nodemon. You can do this in the terminal while nodemon is running by typing ```rs``` and then pressing `enter`.  
+      **IMPORTANT:** The Postman tests manipulate some of the user/vehicle data. Before you run the Postman tests, you should restart nodemon. You can do this in the terminal while nodemon is running by typing ```rs``` and then pressing `enter`.  
 
 ## Endpoints & Queries
 

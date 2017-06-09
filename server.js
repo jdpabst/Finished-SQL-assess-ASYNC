@@ -3,7 +3,7 @@ const express = require('express')
     , cors = require('cors')
     , massive = require('massive');
 
-const mainCtrl = require('./mainCtrl');    
+const mainCtrl = require('./mainCtrl');
 
 const app = express();
 
@@ -30,7 +30,6 @@ massive({
   })
 
 })
-
 
 
 // ===== Build enpoints below ============

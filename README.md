@@ -8,7 +8,7 @@
     - You should notice that you already have a node server set up for you.
     - **NOTE: Do *not* change the port. The Postman tests will only work on port `3000`.**
   3. Create a database called `assessbox` on your postgres server.
-  4. In `server.js`, connect to the `assessbox` database using `massive.js` (see `server.js`, line 11).
+  4. In `server.js`, connect to the `assessbox` database using `massive.js` (see `server.js`, line 13).
 
 ### Users
 

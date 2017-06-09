@@ -3,6 +3,8 @@ const express = require('express')
     , cors = require('cors')
     , massive = require('massive');
 
+const mainCtrl = require('./mainCtrl');    
+
 const app = express();
 
 app.use(bodyParser.json())

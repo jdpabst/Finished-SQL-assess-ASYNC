@@ -21,6 +21,6 @@
     "body-parser": "^1.17.1",
     "cors": "^2.8.3",
     "express": "^4.15.2",
-    "massive": "^2.6.0"
+    "massive": "^3.0.0-rc1"
   }
 }

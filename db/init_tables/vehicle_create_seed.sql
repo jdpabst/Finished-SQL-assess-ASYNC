@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS vehicles (
   make --(add datatype and/or table contraint),
   model --(add datatype and/or table contraint),
   year --(add datatype and/or table contraint),
-  owner_id --(add datatype and/or table contraint),
+  owner_id --(add datatype and/or table contraint)
 );
 
 

@@ -94,9 +94,9 @@ WHERE cookie_name = 'raisin'
 RETURNING *;
 ```
 
-1. Create an endpoint at `GET '/api/users'` that will query the database and get all users.
+1. Create an endpoint at `GET '/api/users'` that will query the database and get all **users**.
 
-2. Create an endpoint at `GET '/api/vehicles'` that will query the database and get all vehicles.
+2. Create an endpoint at `GET '/api/vehicles'` that will query the database and get all **vehicles**.
 
 3. Create an endpoint at `POST '/api/users'` that will take a user from the body and add them to the database.
       * Use the  `RETURNING` clause to return the added user information.
@@ -104,17 +104,17 @@ RETURNING *;
 4. Create an endpoint at `POST '/api/vehicles'` that will take a vehicle from the body and add it to the database.
       * Use the  `RETURNING` clause to return the added vehicle information.
 
-5. Create an endpoint at `GET '/api/user/:userId/vehiclecount'` that will return a count of how many vehicles belong to the given user.
+5. Create an endpoint at `GET '/api/user/:userId/vehiclecount'` that will return a **count** of how many vehicles belong to the given user.
       * Response should be an object with a count property, ie: `{ count: 1 }`
 
-6. Create an endpoint at `GET '/api/user/:userId/vehicle'` that will find all vehicles that belong to the user with the provided users id.
+6. Create an endpoint at `GET '/api/user/:userId/vehicle'` that will find all **vehicles** that belong to the user with the provided users id.
 
-7. Create an endpoint at `GET '/api/vehicle'` that will find all vehicles that belong to the user with the provided user's email.
+7. Create an endpoint at `GET '/api/vehicle'` that will find all **vehicles** that belong to the user with the provided user's email.
       * The users email will be send on the request url as a **query**. Example: `?userEmail=[user email]`
 
-8. Use the *above* endpoint to also handle the query `?userFirstStart=[letters]` to get all vehicles for any user whose first name starts with the provided letters.
+8. Use the *above* endpoint to also handle the query `?userFirstStart=[letters]` to get all **vehicles** for any user whose first name starts with the provided letters.
 
-9. Create an endpoint at `GET '/api/newervehiclesbyyear'` that gets all vehicles newer than 2000 and sorted by year with the newest car first. Include the owner's name from the users table.
+9. Create an endpoint at `GET '/api/newervehiclesbyyear'` that gets all **vehicles** newer than 2000 and sorted by year with the newest car first. Include the owner's name from the users table.
 
 10. Create an endpoint at `PUT '/api/vehicle/:vehicleId/user/:userId'` that changes the ownership of the provided vehicle using the new owner's user id (`userId param`).
       * Use the  `RETURNING` clause to return the updated vehicle information.
@@ -144,4 +144,4 @@ RETURNING *;
 
     **IMPORTANT:** The Postman tests manipulate some of the user data. Before you run the Postman tests, you should restart nodemon. You can do this in the terminal while nodemon is running by typing `rs` and then pressing `enter`.
 
-##### When all 18 tests are passing, show your mentor.
+##### When all 24 tests are passing, show your mentor.
